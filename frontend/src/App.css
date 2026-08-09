@@ -1,0 +1,545 @@
+
+/* Body aur Root element ko full screen width expand karne ke liye */
+html, body, #root {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow-x: hidden;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  background: #f5f7fb;
+  color: #172033;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+}
+
+
+/* =========================
+   LEFT BRAND AREA
+========================= */
+
+.login-brand {
+  width: 47%;
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at 20% 15%,
+      rgba(88, 93, 255, .22),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 90% 90%,
+      rgba(0, 201, 167, .15),
+      transparent 35%
+    ),
+    #10182d;
+
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-brand::before {
+  content: "";
+  position: absolute;
+  width: 480px;
+  height: 480px;
+  border: 1px solid rgba(255,255,255,.07);
+  border-radius: 50%;
+  right: -220px;
+  top: -150px;
+}
+
+.login-brand::after {
+  content: "";
+  position: absolute;
+  width: 650px;
+  height: 650px;
+  border: 1px solid rgba(255,255,255,.05);
+  border-radius: 50%;
+  left: -400px;
+  bottom: -350px;
+}
+
+.brand-content {
+  max-width: 620px;
+  margin: auto;
+  padding: 65px 70px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+}
+
+
+/* LOGO */
+
+.school-logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: linear-gradient(
+    135deg,
+    #6d63ff,
+    #43c8b9
+  );
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow:
+    0 12px 35px rgba(70, 80, 255, .28);
+}
+
+.school-logo span {
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: -1px;
+}
+
+.brand-name {
+  position: absolute;
+  top: 68px;
+  left: 130px;
+}
+
+.brand-name h2,
+.mobile-logo h2 {
+  margin: 0;
+  font-size: 23px;
+  letter-spacing: -1px;
+}
+
+.brand-name h2 span,
+.mobile-logo h2 span {
+  color: #7770ff;
+}
+
+.brand-name p,
+.mobile-logo p {
+  margin: 3px 0 0;
+  font-size: 11px;
+  color: #9ba5bc;
+}
+
+
+/* BRAND HEADING */
+
+.brand-heading {
+  margin-top: 145px;
+}
+
+.brand-heading > span {
+  color: #8580ff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.brand-heading h1 {
+  font-size: clamp(42px, 4vw, 62px);
+  line-height: 1.05;
+  letter-spacing: -3px;
+  margin: 18px 0;
+  font-weight: 400;
+}
+
+.brand-heading h1 strong {
+  color: #8c86ff;
+  font-weight: 700;
+}
+
+.brand-heading p {
+  max-width: 500px;
+  color: #aab2c5;
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+
+/* FEATURES */
+
+.feature-list {
+  margin-top: 45px;
+  display: grid;
+  gap: 20px;
+}
+
+.feature {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.feature-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  background: rgba(255,255,255,.07);
+  color: #8c86ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+}
+
+.feature strong {
+  display: block;
+  font-size: 13px;
+}
+
+.feature small {
+  display: block;
+  color: #7e8aa3;
+  margin-top: 3px;
+  font-size: 11px;
+}
+
+.brand-footer {
+  margin-top: auto;
+  color: #59647b;
+  font-size: 11px;
+}
+
+
+/* =========================
+   RIGHT AREA
+========================= */
+
+.login-area {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 430px;
+}
+
+
+/* MOBILE LOGO */
+
+.mobile-logo {
+  display: none;
+}
+
+
+/* HEADER */
+
+.login-header {
+  margin-bottom: 35px;
+}
+
+.welcome-tag {
+  display: inline-block;
+  color: #6861e9;
+  background: #efeeff;
+  border-radius: 30px;
+  padding: 7px 12px;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.login-header h1 {
+  font-size: 38px;
+  letter-spacing: -1.7px;
+  margin: 17px 0 8px;
+}
+
+.login-header p {
+  color: #7c8496;
+  margin: 0;
+  font-size: 14px;
+}
+
+
+/* FORM */
+
+.form-group {
+  margin-bottom: 22px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 9px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #30394c;
+}
+
+.label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.label-row a {
+  font-size: 11px;
+  color: #6c64ed;
+  text-decoration: none;
+}
+
+
+/* INPUT */
+
+.input-wrapper,
+.select-wrapper {
+  position: relative;
+}
+
+.input-wrapper input,
+.select-wrapper select {
+  width: 100%;
+  height: 52px;
+  border: 1px solid #e1e5ed;
+  background: #fff;
+  border-radius: 11px;
+  outline: none;
+  padding: 0 15px 0 45px;
+  color: #20283a;
+  transition: .2s;
+}
+
+.select-wrapper select {
+  padding-left: 15px;
+  appearance: none;
+  cursor: pointer;
+}
+
+.input-wrapper input::placeholder {
+  color: #aeb5c2;
+}
+
+.input-wrapper input:focus,
+.select-wrapper select:focus {
+  border-color: #7770ef;
+  box-shadow: 0 0 0 4px rgba(119,112,239,.09);
+}
+
+.input-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9099aa;
+  font-size: 13px;
+  z-index: 2;
+}
+
+.select-wrapper span {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #8c94a4;
+}
+
+
+/* PASSWORD */
+
+.password-btn {
+  border: 0;
+  background: none;
+  position: absolute;
+  right: 13px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6962e9;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+
+/* REMEMBER */
+
+.remember-row {
+  margin: 2px 0 25px;
+}
+
+.remember {
+  display: flex !important;
+  align-items: center;
+  gap: 9px;
+  font-size: 11px !important;
+  color: #71798a !important;
+  font-weight: 500 !important;
+  cursor: pointer;
+}
+
+.remember input {
+  display: none;
+}
+
+.checkmark {
+  width: 17px;
+  height: 17px;
+  border: 1px solid #d6dbe4;
+  border-radius: 5px;
+  position: relative;
+}
+
+.remember input:checked + .checkmark {
+  background: #6c64ed;
+  border-color: #6c64ed;
+}
+
+.remember input:checked + .checkmark::after {
+  content: "✓";
+  color: white;
+  position: absolute;
+  font-size: 11px;
+  left: 3px;
+  top: -1px;
+}
+
+
+/* LOGIN BUTTON */
+
+.login-btn {
+  width: 100%;
+  height: 54px;
+  border: 0;
+  border-radius: 11px;
+  background: #171f35;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+
+  transition: .25s;
+}
+
+.login-btn span {
+  font-size: 20px;
+  transition: .25s;
+}
+
+.login-btn:hover {
+  background: #6b63ec;
+  box-shadow:
+    0 12px 28px rgba(107,99,236,.22);
+}
+
+.login-btn:hover span {
+  transform: translateX(4px);
+}
+
+
+/* HELP */
+
+.login-help {
+  text-align: center;
+  margin-top: 27px;
+  font-size: 11px;
+  color: #8c94a3;
+}
+
+.login-help a {
+  margin-left: 5px;
+  color: #6962e9;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+
+/* SECURITY */
+
+.security-note {
+  margin-top: 35px;
+  padding-top: 20px;
+  border-top: 1px solid #e8ebf0;
+
+  text-align: center;
+  color: #a0a7b4;
+  font-size: 10px;
+}
+
+.security-note span {
+  margin-right: 5px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+  .login-brand {
+    display: none;
+  }
+
+  .login-area {
+    padding: 30px 20px;
+  }
+
+  .mobile-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 55px;
+  }
+
+  .mobile-logo .school-logo {
+    width: 42px;
+    height: 42px;
+  }
+
+  .login-header h1 {
+    font-size: 34px;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .login-area {
+    padding: 25px 18px;
+  }
+
+  .login-card {
+    max-width: 100%;
+  }
+
+  .login-header {
+    margin-bottom: 28px;
+  }
+
+  .login-header h1 {
+    font-size: 31px;
+  }
+
+}
